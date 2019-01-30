@@ -16,6 +16,7 @@ public class Proyectox0grupo {
         String seguirjugando ="";
         char simbolo1,simbolo2;
         int marca1,marca2;
+        String A1="1String",A2="2",A3="3",B1="4",B2="5",B3="6",C1="7",C2="8",C3="9";
         
         //________________________
         
@@ -31,6 +32,19 @@ public class Proyectox0grupo {
         simbolo2 = leer.next().charAt(0);
         
         
+        System.out.println("______________________________");
+            System.out.println("||      ||         ||        ||");
+            System.out.println("||  "+A1+"   ||    "+A2+"    ||    "+A3+"   ||");
+            System.out.println("||      ||         ||        ||");
+            System.out.println("______________________________");
+            System.out.println("||      ||         ||        ||");
+            System.out.println("||  "+B1+"   ||    "+B2+"    ||    "+B3+"   ||");
+            System.out.println("||      ||         ||        ||");
+            System.out.println("______________________________");
+            System.out.println("||      ||         ||        ||"); 
+            System.out.println("||  "+C1+"   ||    "+C2+"    ||    "+C3+"   ||");
+            System.out.println("||      ||         ||        ||");
+            System.out.println("______________________________");
         
         
         

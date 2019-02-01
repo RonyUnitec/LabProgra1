@@ -24,6 +24,12 @@ public class Proyectox0grupo {
         
         //________________________
         
+        
+         //Contador de victorias
+        int victoriasjug1 = 0,
+            victoriasjug2 = 0,
+            empate= 0    ;
+        
         System.out.print("Ingrese nombre del jugador1 : ");
         jugador1 = leer.nextLine(); 
         System.out.print("\nIngrese nombre del jugador2 : ");
@@ -35,8 +41,18 @@ public class Proyectox0grupo {
            System.out.print("Ingrese marca que usara el jugador " + jugador2 + " :" );
         simbolo2 = leer.next().charAt(0);
         
-        
-        System.out.println("______________________________");
+      while(true){
+          //Asignando valores para seguir jugando
+                VA1 = false;VA2=false;VA3 = false ;
+                VB1 = false;VB2=false;VB3 = false ;
+                VC1 = false;VC2=false;VC3 = false;
+                
+                A1="1";A2="2";A3="3";B1="4";B2="5";B3="6";C1="7";C2="8";C3="9";
+                
+                
+          
+          
+            System.out.println("______________________________");
             System.out.println("||      ||         ||        ||");
             System.out.println("||  "+A1+"   ||    "+A2+"    ||    "+A3+"   ||");
             System.out.println("||      ||         ||        ||");
@@ -50,7 +66,8 @@ public class Proyectox0grupo {
             System.out.println("||      ||         ||        ||");
             System.out.println("______________________________");
         
-              marca1 = 0;
+       while(true){
+           marca1 = 0;
            marca2 = 0;
            
            if (turnos == true) {
@@ -61,7 +78,9 @@ public class Proyectox0grupo {
                marca2 = leer.nextInt(); 
            
            }
-        if (marca1 > 0 && marca1 <10 ){
+                      
+           
+           if (marca1 > 0 && marca1 <10 ){
              
                switch(marca1){
                
@@ -238,6 +257,158 @@ public class Proyectox0grupo {
             System.out.println("||  "+C1+"   ||    "+C2+"    ||    "+C3+"   ||");
             System.out.println("||      ||         ||        ||");
             System.out.println("______________________________");
+            
+            
+            
+            //Condiciones de victoria para jugador 1
+            
+            if(A1.equals(String.valueOf(simbolo1)) && A2.equals(String.valueOf(simbolo1)) && A3.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            if(B1.equals(String.valueOf(simbolo1)) && B2.equals(String.valueOf(simbolo1)) && B3.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            if(C1.equals(String.valueOf(simbolo1)) && C2.equals(String.valueOf(simbolo1)) && C3.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            if(A1.equals(String.valueOf(simbolo1)) && B1.equals(String.valueOf(simbolo1)) && C1.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            if(A2.equals(String.valueOf(simbolo1)) && B2.equals(String.valueOf(simbolo1)) && C2.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            if(A3.equals(String.valueOf(simbolo1)) && B3.equals(String.valueOf(simbolo1)) && C3.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            if(A1.equals(String.valueOf(simbolo1)) && B2.equals(String.valueOf(simbolo1)) && C3.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            if(A3.equals(String.valueOf(simbolo1)) && B2.equals(String.valueOf(simbolo1)) && C1.equals(String.valueOf(simbolo1))  ){
+                
+                System.out.println("EL JUGADOR " + jugador1 + " GANO !!");
+                victoriasjug1 ++;
+                break;
+            }
+            
+            
+            
+            
+             //Condiciones de victoria para jugador 2
+            
+            if(A1.equals(String.valueOf(simbolo2)) && A2.equals(String.valueOf(simbolo2)) && A3.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            if(B1.equals(String.valueOf(simbolo2)) && B2.equals(String.valueOf(simbolo2)) && B3.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            if(C1.equals(String.valueOf(simbolo2)) && C2.equals(String.valueOf(simbolo2)) && C3.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            if(A1.equals(String.valueOf(simbolo2)) && B1.equals(String.valueOf(simbolo2)) && C1.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            if(A2.equals(String.valueOf(simbolo2)) && B2.equals(String.valueOf(simbolo2)) && C2.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            if(A3.equals(String.valueOf(simbolo2)) && B3.equals(String.valueOf(simbolo2)) && C3.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            if(A1.equals(String.valueOf(simbolo2)) && B2.equals(String.valueOf(simbolo2)) && C3.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            if(A3.equals(String.valueOf(simbolo2)) && B2.equals(String.valueOf(simbolo2)) && C1.equals(String.valueOf(simbolo2))  ){
+                
+                System.out.println("EL JUGADOR " + jugador2 + " GANO !!");
+                victoriasjug2 ++;
+                break;
+            }
+            
+            
+            //Condicion de empate
+            
+            
+            if (VA1 == true && VA2 == true &&  VA3 ==true &&  VB1 ==true && VB2 == true && VB3 ==true && VC1 == true && VC2 == true && VC3 == true) {
+                
+                System.out.println("EMPATE!!!!!");
+                empate ++;
+                break;
+           
+               
+           }
+        
+        
+        }
+       
+       
+       
+       
     }
     
+}
 }

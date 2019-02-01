@@ -1,79 +1,64 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package proyectox0grupo;
 
-//importando scanner
 import java.util.Scanner;
 
-public class Proyectox0grupo {
-
-    public static void main(String[] args) {
-        //definiendo bot
-        bot bot1 =  new bot();
-        //si no
-        String sino = "n";
-        
-         //definiendo scanner
+/**
+ *
+ * @author SkyWalker
+ */
+public class bot {
+    
+    public void jugandosolo(){
+     //definiendo scanner
         Scanner leer = new Scanner(System.in);
         
         //declarando Variables 
         String jugador1,jugador2;
         String seguirjugando ="";
-        char simbolo1,simbolo2;
+        char simbolo1,simbolo2 = String.valueOf("B").charAt(0);
         int marca1,marca2;
-        String A1="1String",A2="2",A3="3",B1="4",B2="5",B3="6",C1="7",C2="8",C3="9";
         
-        boolean turnos = true;
+        //Asignando numeros a las posiciones
+        String A1="1",A2="2",A3="3",B1="4",B2="5",B3="6",C1="7",C2="8",C3="9";
         
-        boolean VA1=false,VA2=false,VA3=false,
-                VB1=false,VB2=false,VB3=false,
-                VC1=false,VC2=false,VC3=false;
+        //variables para verificar que la posicion a escribir la marca no este ocupada
+        boolean VA1 = false,VA2=false, VA3 = false ,
+                VB1 = false,VB2=false, VB3 = false ,
+                VC1 = false,VC2=false ,VC3 = false;
         
-        //________________________
-        
-        
-         //Contador de victorias
+        //Contador de victorias
         int victoriasjug1 = 0,
             victoriasjug2 = 0,
-            empate= 0    ;
-        
-        
-        //preguntar si desea jugar con el bot
-           System.out.println("Desea jugar con un BOT (y/n (default)??");
-        try {
-            sino = leer.nextLine();
-        } catch (Exception e) {
-        }
-        
-        if (sino.equals("y")) {
-            bot1.jugandosolo();
-        }
-        else{
+            empate= 0,posicionvbot =0    ;
             
-            
-          
-            
-        //solicitando nimbres de los jugadores
+        
+        //intercalar entre turnos
+        boolean turnos = true;
+        
+        jugador2="BOT";
+      
         System.out.print("Ingrese nombre del jugador1 : ");
         jugador1 = leer.nextLine(); 
-        System.out.print("\nIngrese nombre del jugador2 : ");
-        jugador2 = leer.nextLine();
+        System.out.println("\nIngrese nombre del jugador2 : " + jugador2);
+        
 
-        //solicitando marcas a utilizar en el juego.
+        
            System.out.print("Ingrese marca que usara el jugador " + jugador1 + " :" );
         simbolo1 = leer.next().charAt(0);
-           System.out.print("Ingrese marca que usara el jugador " + jugador2 + " :" );
-        simbolo2 = leer.next().charAt(0);
-      
-        //ciclo para seguir jugando --->
+           System.out.print("Ingrese marca que usara el jugador " + jugador2 + " :" + simbolo2 +"\n");
+       
+        
       while(true){
-          
-          
-          //Asignando verificacion para las posiciones de la tablero
+          //Asignando valores para seguir jugando
                 VA1 = false;VA2=false;VA3 = false ;
                 VB1 = false;VB2=false;VB3 = false ;
                 VC1 = false;VC2=false;VC3 = false;
-           
-          //Asignando numero de seleccion a las areas del tablero
+                
                 A1="1";A2="2";A3="3";B1="4";B2="5";B3="6";C1="7";C2="8";C3="9";
                 
                 
@@ -93,7 +78,6 @@ public class Proyectox0grupo {
             System.out.println("||      ||         ||        ||");
             System.out.println("______________________________");
         
-            //ciclo para verificar las posiciones y si existe un ganador o empate -->
        while(true){
            marca1 = 0;
            marca2 = 0;
@@ -102,15 +86,82 @@ public class Proyectox0grupo {
                System.out.print("Ingrese la posicion donde desea la marca el jugador 1 : ");
                marca1 = leer.nextInt();
            }else{
-               System.out.print("Ingrese la posicion donde desea la marca el jugador 2 : ");
-               marca2 = leer.nextInt(); 
+               //asignando valor bot  
+               posicionvbot =0;
+               while (true) { 
+                   
+                   marca2 = (int) ((Math.random()*9)+1);
+                   
+                   switch(marca2){
+                       
+                       case(1):
+                           if(VA1 ==false){
+                              posicionvbot =1;
+                            }
+                        break;  
+                        
+                        case(2):
+                           if(VA2 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        
+                        case(3):
+                           if(VA3 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        
+                        case(4):
+                           if(VB1 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        case(5):
+                           if(VB2 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        case(6):
+                           if(VB3 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        case(7):
+                           if(VC1 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        case(8):
+                           if(VC2 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+                        case(9):
+                           if(VC3 ==false){
+                              posicionvbot =1;
+                            }
+                        break; 
+      
+                   }
+                   
+                   if (posicionvbot == 1) {
+                       System.out.println("Posicion seleccionada por BOT : " + marca2);
+                       break;
+                   }
+                   
+               }
+       
+                   
+        
            
            }
                       
            
-           //verificando marcas del jugador 1 y 2
            if (marca1 > 0 && marca1 <10 ){
              
+               
+        
                switch(marca1){
                
                case(1):
@@ -271,7 +322,7 @@ public class Proyectox0grupo {
                 
 
 
-        }else{System.out.println("POSICION INVALIDA!!");} 
+        }
         
             System.out.println("______________________________");
             System.out.println("||      ||         ||        ||");
@@ -433,7 +484,8 @@ public class Proyectox0grupo {
         
         
         }
-       //ciclo para seguir jugando-->
+            
+       
        while (true) {              
               System.out.println("Desea seguir jugando ?? (y/n)");
             seguirjugando= leer.next().toLowerCase();
@@ -449,16 +501,20 @@ public class Proyectox0grupo {
            
            
           }
+          
        if(seguirjugando.equals("n")){
-       break;
+           break;
        }
-       
-    }
-      //imprimiendo resultados.
-        System.out.println("Juego terminado");
-        System.out.println("Jugador "+ jugador1 + " gano :"+victoriasjug1);
-        System.out.println("Jugador "+ jugador2 + " gano :"+victoriasjug2);
-        System.out.println("hubieron "+ empate + " empates ");
+      
+      }
+      
+        System.out.println("juego terminado");
+        System.out.println("jugador " + jugador1 + " gano :" + victoriasjug1);
+        System.out.println("jugador " + jugador2 + " gano :" + victoriasjug2);
+        System.out.println("hubieron " + empate + " empates");
+        
     
-}}
+    
+    }
+    
 }

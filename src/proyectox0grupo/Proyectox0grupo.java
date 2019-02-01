@@ -405,8 +405,24 @@ public class Proyectox0grupo {
         
         }
        
-       
-       
+       while (true) {              
+              System.out.println("Desea seguir jugando ?? (y/n)");
+            seguirjugando= leer.next().toLowerCase();
+            
+          
+           if (seguirjugando.equals("y")) {
+               break;
+               
+           }else if(seguirjugando.equals("n")){
+               break;
+           }
+           
+           
+           
+          }
+       if(seguirjugando.equals("n")){
+       break;
+       }
        
     }
     

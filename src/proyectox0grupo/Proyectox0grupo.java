@@ -17,6 +17,7 @@ public class Proyectox0grupo {
         char simbolo1,simbolo2;
         int marca1,marca2;
         String A1="1String",A2="2",A3="3",B1="4",B2="5",B3="6",C1="7",C2="8",C3="9";
+        boolean turnos = true;
         
         //________________________
         
@@ -46,7 +47,17 @@ public class Proyectox0grupo {
             System.out.println("||      ||         ||        ||");
             System.out.println("______________________________");
         
-        
+              marca1 = 0;
+           marca2 = 0;
+           
+           if (turnos == true) {
+               System.out.print("Ingrese la posicion donde desea la marca el jugador 1 : ");
+               marca1 = leer.nextInt();
+           }else{
+               System.out.print("Ingrese la posicion donde desea la marca el jugador 2 : ");
+               marca2 = leer.nextInt(); 
+           
+           }
         
     }
     

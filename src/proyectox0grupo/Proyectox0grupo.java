@@ -425,6 +425,11 @@ public class Proyectox0grupo {
        }
        
     }
+      
+        System.out.println("Juego terminado");
+        System.out.println("Jugador "+ jugador1 + " gano :"+victoriasjug1);
+        System.out.println("Jugador "+ jugador2 + " gano :"+victoriasjug2);
+        System.out.println("hubieron "+ empate + " empates ");
     
 }
 }
